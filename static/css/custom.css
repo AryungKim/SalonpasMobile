@@ -387,3 +387,61 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.8rem;
     }
 }
+
+/* Platform Comparison Styles */
+.platform-comparison {
+    margin-top: auto;
+}
+
+.platform-card {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.platform-card:hover {
+    transform: translateY(-3px);
+}
+
+.platform-logo {
+    height: 30px;
+    width: auto;
+    margin-bottom: 0.5rem;
+}
+
+.platform-card.noon .btn-primary {
+    background-color: #404553;
+    border-color: #404553;
+}
+
+.platform-card.noon .btn-primary:hover {
+    background-color: #2d3139;
+    border-color: #2d3139;
+}
+
+.platform-card.amazon .btn-outline-primary {
+    color: #232F3E;
+    border-color: #232F3E;
+}
+
+.platform-card.amazon .btn-outline-primary:hover {
+    background-color: #232F3E;
+    color: white;
+}
+
+/* Responsive adjustments for platform cards */
+@media (max-width: 768px) {
+    .platform-card {
+        padding: 0.5rem;
+    }
+
+    .platform-logo {
+        height: 25px;
+    }
+
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
