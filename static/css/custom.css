@@ -1,34 +1,49 @@
 :root {
-    --primary-blue: #0066cc;
-    --secondary-blue: #003366;
-    --light-gray: #f8f9fa;
+    --primary-green: #2E8B57;
+    --secondary-white: #FFFFFF;
+    --accent-light-green: #F0FFF0;
+    --text-dark-grey: #333333;
 }
 
 /* RTL Support */
 [dir="rtl"] {
     text-align: right;
+    font-family: 'Traditional Arabic', sans-serif;
 }
 
 /* General Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--text-dark-grey);
+    background-color: var(--secondary-white);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: var(--primary-green);
 }
 
 .navbar {
-    background-color: white;
+    background-color: var(--secondary-white);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.navbar-light .navbar-nav .nav-link {
+    color: var(--primary-green);
+}
+
 .hero-section {
-    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+    background: linear-gradient(rgba(240,255,240,0.9), rgba(240,255,240,0.9)),
                 url('https://images.unsplash.com/photo-1607962837359-5e7e89f86776');
     background-size: cover;
     background-position: center;
     padding: 6rem 0;
+    color: var(--text-dark-grey);
 }
 
 .benefits-section {
-    background-color: var(--light-gray);
+    background-color: var(--accent-light-green);
     padding: 4rem 0;
 }
 
@@ -36,6 +51,7 @@ body {
     border: none;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    background-color: var(--secondary-white);
 }
 
 .product-card:hover {
@@ -43,18 +59,45 @@ body {
 }
 
 .cta-button {
-    background-color: var(--primary-blue);
-    color: white;
+    background-color: var(--primary-green);
+    color: var(--secondary-white);
     padding: 0.75rem 2rem;
     border-radius: 50px;
     text-transform: uppercase;
     font-weight: bold;
     border: none;
+    transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: var(--secondary-blue);
-    color: white;
+    background-color: #1f6e43;
+    color: var(--secondary-white);
+}
+
+/* Language Toggle Styling */
+.form-check-input:checked {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+/* Card Styling */
+.card {
+    border-color: var(--accent-light-green);
+}
+
+.card-body {
+    background-color: var(--secondary-white);
+}
+
+/* Icon Colors */
+.text-primary {
+    color: var(--primary-green) !important;
+}
+
+/* Footer */
+footer {
+    background-color: var(--accent-light-green);
+    color: var(--text-dark-grey);
 }
 
 /* Mobile Optimizations */
@@ -62,7 +105,7 @@ body {
     .hero-section {
         padding: 3rem 0;
     }
-    
+
     .navbar-brand img {
         max-width: 120px;
     }
