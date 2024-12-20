@@ -1,0 +1,32 @@
+TRANSLATIONS = {
+    'en': {
+        'nav_home': 'Home',
+        'nav_products': 'Products',
+        'nav_promotions': 'Promotions',
+        'hero_title': 'Natural Pain Relief Solution',
+        'hero_subtitle': 'Trusted by Athletes and Fitness Enthusiasts',
+        'cta_shop': 'Shop Now',
+        'cta_sample': 'Request Sample',
+        'benefits_title': 'Why Choose Salonpas?',
+        'benefit_1': 'Fast-Acting Relief',
+        'benefit_2': 'Clinically Proven',
+        'benefit_3': 'Easy to Apply',
+        'products_title': 'Our Products',
+        'promotions_title': 'Special Offers',
+    },
+    'ar': {
+        'nav_home': 'الرئيسية',
+        'nav_products': 'المنتجات',
+        'nav_promotions': 'العروض',
+        'hero_title': 'حل طبيعي لتخفيف الألم',
+        'hero_subtitle': 'موثوق به من قبل الرياضيين ومحبي اللياقة البدنية',
+        'cta_shop': 'تسوق الآن',
+        'cta_sample': 'اطلب عينة',
+        'benefits_title': 'لماذا تختار سالونباس؟',
+        'benefit_1': 'تخفيف سريع للألم',
+        'benefit_2': 'مثبت سريريًا',
+        'benefit_3': 'سهل الاستخدام',
+        'products_title': 'منتجاتنا',
+        'promotions_title': 'عروض خاصة',
+    }
+}

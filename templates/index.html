@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-4 mb-4">{{ g.translations.hero_title }}</h1>
+        <p class="lead mb-5">{{ g.translations.hero_subtitle }}</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="/products" class="cta-button">{{ g.translations.cta_shop }}</a>
+            <a href="/promotions" class="cta-button">{{ g.translations.cta_sample }}</a>
+        </div>
+    </div>
+</section>
+
+<section class="benefits-section">
+    <div class="container">
+        <h2 class="text-center mb-5">{{ g.translations.benefits_title }}</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-bolt fa-3x mb-3 text-primary"></i>
+                        <h3>{{ g.translations.benefit_1 }}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-check-circle fa-3x mb-3 text-primary"></i>
+                        <h3>{{ g.translations.benefit_2 }}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-hand-holding fa-3x mb-3 text-primary"></i>
+                        <h3>{{ g.translations.benefit_3 }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

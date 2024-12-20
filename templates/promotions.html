@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="container my-5">
+    <h1 class="text-center mb-5">{{ g.translations.promotions_title }}</h1>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a" class="card-img-top" alt="Special Offer">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Free Sample Pack</h5>
+                    <p class="card-text">Try our most popular products with our free sample pack</p>
+                    <a href="#" class="cta-button">{{ g.translations.cta_sample }}</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1611349405725-57c3e7a94e2d" class="card-img-top" alt="Bundle Offer">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Sports Bundle</h5>
+                    <p class="card-text">Save 25% when you buy our sports recovery bundle</p>
+                    <a href="#" class="cta-button">{{ g.translations.cta_shop }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

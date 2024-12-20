@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="container my-5">
+    <h1 class="text-center mb-5">{{ g.translations.products_title }}</h1>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="product-card card">
+                <img src="https://images.unsplash.com/photo-1504813184591-01572f98c85f" class="card-img-top" alt="Salonpas Pain Relief Patch">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Salonpas Pain Relief Patch</h5>
+                    <p class="card-text">Long-lasting pain relief for muscle and joint pain</p>
+                    <a href="#" class="cta-button">{{ g.translations.cta_shop }}</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="product-card card">
+                <img src="https://images.unsplash.com/photo-1519494080410-f9aa76cb4283" class="card-img-top" alt="Salonpas Gel">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Salonpas Pain Relief Gel</h5>
+                    <p class="card-text">Fast-absorbing gel for targeted pain relief</p>
+                    <a href="#" class="cta-button">{{ g.translations.cta_shop }}</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="product-card card">
+                <img src="https://images.unsplash.com/photo-1617201929422-a040c2699366" class="card-img-top" alt="Salonpas Spray">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Salonpas Pain Relief Spray</h5>
+                    <p class="card-text">Easy-to-use spray for quick pain relief</p>
+                    <a href="#" class="cta-button">{{ g.translations.cta_shop }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
