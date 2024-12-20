@@ -13,6 +13,12 @@ TRANSLATIONS = {
         'benefit_3': 'Easy to Apply',
         'products_title': 'Our Products',
         'promotions_title': 'Special Offers',
+        # New share translations
+        'share_title': 'Share',
+        'share_twitter': 'Share on Twitter',
+        'share_facebook': 'Share on Facebook',
+        'share_whatsapp': 'Share on WhatsApp',
+        'share_message': 'Experience natural pain relief with Salonpas - trusted by athletes and fitness enthusiasts! 💪 #Salonpas #PainRelief',
     },
     'ar': {
         'nav_home': 'الرئيسية',
@@ -28,5 +34,11 @@ TRANSLATIONS = {
         'benefit_3': 'سهل الاستخدام',
         'products_title': 'منتجاتنا',
         'promotions_title': 'عروض خاصة',
+        # New share translations
+        'share_title': 'مشاركة',
+        'share_twitter': 'مشاركة على تويتر',
+        'share_facebook': 'مشاركة على فيسبوك',
+        'share_whatsapp': 'مشاركة على واتساب',
+        'share_message': 'جرب التخفيف الطبيعي للألم مع سالونباس - موثوق به من قبل الرياضيين! 💪 #سالونباس #تخفيف_الألم',
     }
 }

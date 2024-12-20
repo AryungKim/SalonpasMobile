@@ -154,6 +154,35 @@ footer {
     color: var(--text-dark-grey);
 }
 
+/* Share Buttons */
+.share-buttons {
+    padding: 1rem 0;
+}
+
+.share-buttons .btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--secondary-white);
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+    transition: all 0.3s ease;
+}
+
+.share-buttons .btn:hover {
+    background-color: var(--primary-green);
+    color: var(--secondary-white);
+    transform: translateY(-2px);
+}
+
+[dir="rtl"] .share-buttons {
+    text-align: right;
+}
+
 /* Mobile Optimizations */
 @media (max-width: 768px) {
     .hero-section {

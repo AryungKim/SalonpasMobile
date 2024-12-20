@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "partials/share_buttons.html" import share_buttons %}
 
 {% block content %}
 <section class="hero-section text-center">
@@ -83,6 +84,7 @@
             <a href="/products" class="btn btn-primary btn-lg">{{ g.translations.cta_shop }}</a>
             <a href="/promotions" class="btn btn-outline-light btn-lg">{{ g.translations.cta_sample }}</a>
         </div>
+        {{ share_buttons() }}
     </div>
 </section>
 {% endblock %}

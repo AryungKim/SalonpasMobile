@@ -1,0 +1,23 @@
+{% macro share_buttons() %}
+<div class="share-buttons mt-4">
+    <h5 class="mb-3">{{ g.translations.share_title }}</h5>
+    <div id="share-translations" 
+         data-message-EN="{{ g.translations.share_message }}" 
+         data-message-AR="{{ g.translations.share_message }}">
+    </div>
+    <div class="d-flex gap-2">
+        <button class="btn btn-outline-primary btn-sm" data-share="twitter" 
+                title="{{ g.translations.share_twitter }}">
+            <i class="fab fa-twitter"></i>
+        </button>
+        <button class="btn btn-outline-primary btn-sm" data-share="facebook"
+                title="{{ g.translations.share_facebook }}">
+            <i class="fab fa-facebook-f"></i>
+        </button>
+        <button class="btn btn-outline-primary btn-sm" data-share="whatsapp"
+                title="{{ g.translations.share_whatsapp }}">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    </div>
+</div>
+{% endmacro %}
