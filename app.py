@@ -20,6 +20,10 @@ def index():
 def products():
     return render_template('products.html')
 
+@app.route('/how-to-use')
+def how_to_use():
+    return render_template('how-to-use.html')
+
 @app.route('/promotions')
 def promotions():
     return render_template('promotions.html')

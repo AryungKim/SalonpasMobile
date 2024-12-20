@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="container my-5">
+    <h1 class="text-center mb-5">How to Apply: Salonpas Pain Relief Patch</h1>
+    
+    <div class="usage-steps">
+        <!-- Step 1: Clean Area -->
+        <div class="step-card mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="step-number">1</div>
+                </div>
+                <div class="col-md-9">
+                    <h3>Prepare the Area</h3>
+                    <p>Clean and dry the affected area before applying. Wash your hands if necessary.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Remove Film -->
+        <div class="step-card mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="step-number">2</div>
+                </div>
+                <div class="col-md-9">
+                    <h3>Remove Protective Film</h3>
+                    <p>Bend the plaster and detach the centre part of the film.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Apply Patch -->
+        <div class="step-card mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="step-number">3</div>
+                </div>
+                <div class="col-md-9">
+                    <h3>Apply the Patch</h3>
+                    <p>Apply the adhesive part directly on the affected area.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4: Remove Backing -->
+        <div class="step-card mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="step-number">4</div>
+                </div>
+                <div class="col-md-9">
+                    <h3>Remove Backing</h3>
+                    <p>Slide the film backwards and forwards to complete application.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Important Notes -->
+    <div class="usage-notes mt-5">
+        <h3 class="text-center mb-4">Important Information</h3>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <ul class="list-unstyled">
+                    <li class="mb-3">• Only use one patch at a time.</li>
+                    <li class="mb-3">• A single patch could be applied for up to 8 to 12 hours.</li>
+                    <li class="mb-3">• If pain occurs again 8 to 12 hours after applying the first patch, a second patch could be applied. Remove the first patch before applying a new patch.</li>
+                    <li class="mb-3">• Salonpas Pain Relief Patch is suitable for adults and should not be used by children and adolescents under 18 years of age.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Areas -->
+    <div class="application-areas mt-5">
+        <h3 class="text-center mb-4">Common Application Areas</h3>
+        <div class="row justify-content-center text-center">
+            <div class="col-6 col-md-2">
+                <h5>Back</h5>
+            </div>
+            <div class="col-6 col-md-2">
+                <h5>Shoulder</h5>
+            </div>
+            <div class="col-6 col-md-2">
+                <h5>Knee</h5>
+            </div>
+            <div class="col-6 col-md-2">
+                <h5>Calf</h5>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Products Button -->
+    <div class="text-center mt-5">
+        <a href="/products" class="btn btn-lg btn-primary">
+            Back to Products
+            <i class="fas fa-arrow-left ms-2"></i>
+        </a>
+    </div>
+</section>
+
+<style>
+.usage-steps {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.step-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.usage-notes {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.application-areas h5 {
+    color: var(--primary-green);
+    margin-top: 1rem;
+}
+</style>
+{% endblock %}
