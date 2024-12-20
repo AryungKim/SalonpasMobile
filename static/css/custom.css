@@ -342,3 +342,50 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 2rem;
     }
 }
+
+/* Floating CTA Button */
+.floating-cta {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none; /* Hidden by default on desktop */
+}
+
+.floating-cta .btn {
+    width: auto;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--primary-green);
+    color: var(--secondary-white);
+    border: none;
+}
+
+.floating-cta .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.floating-cta .btn i {
+    margin-left: 8px;
+}
+
+/* Show floating CTA only on mobile */
+@media (max-width: 768px) {
+    .floating-cta {
+        display: block;
+    }
+}
+
+[dir="rtl"] .floating-cta {
+    right: auto;
+    left: 20px;
+}
+
+[dir="rtl"] .floating-cta .btn i {
+    margin-left: 0;
+    margin-right: 8px;
+}
