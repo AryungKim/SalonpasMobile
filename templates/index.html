@@ -2,15 +2,23 @@
 {% from "partials/share_buttons.html" import share_buttons %}
 
 {% block content %}
-<section class="hero-section text-center">
+<section class="hero-section">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-8 mx-auto">
-                <h1 class="display-4 fw-bold mb-4">{{ g.translations.hero_title }}</h1>
+            <div class="col-lg-6 text-lg-start text-center">
+                <h1 class="display-3 fw-bold mb-4">{{ g.translations.hero_title }}</h1>
                 <p class="lead mb-5">{{ g.translations.hero_subtitle }}</p>
-                <div class="d-flex gap-3 justify-content-center">
-                    <a href="/products" class="btn btn-primary btn-lg">{{ g.translations.cta_shop }}</a>
+                <div class="cta-primary">
+                    <a href="/products" class="btn btn-primary btn-lg pulse-animation">
+                        {{ g.translations.cta_shop }}
+                        <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
                 </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="{{ url_for('static', filename='images/athlete-image.png') }}" 
+                     alt="Active Lifestyle" 
+                     class="hero-image animated-fade-in">
             </div>
         </div>
     </div>
@@ -90,30 +98,15 @@
     </div>
 </section>
 
-<section class="product-showcase py-5 bg-light">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2 class="mb-4">{{ g.translations.showcase_title }}</h2>
-                <p class="lead mb-4">{{ g.translations.showcase_description }}</p>
-                <ul class="feature-list text-start">
-                    <li><i class="fas fa-check text-primary"></i> {{ g.translations.feature_1 }}</li>
-                    <li><i class="fas fa-check text-primary"></i> {{ g.translations.feature_2 }}</li>
-                    <li><i class="fas fa-check text-primary"></i> {{ g.translations.feature_3 }}</li>
-                    <li><i class="fas fa-check text-primary"></i> {{ g.translations.feature_4 }}</li>
-                </ul>
-                <a href="/products" class="btn btn-primary btn-lg mt-4">{{ g.translations.cta_shop }}</a>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="cta-section py-5">
     <div class="container text-center">
-        <h2 class="mb-4">{{ g.translations.cta_title }}</h2>
+        <h2 class="display-4 mb-4">{{ g.translations.cta_title }}</h2>
         <p class="lead mb-4">{{ g.translations.cta_description }}</p>
-        <div class="d-flex gap-3 justify-content-center">
-            <a href="/products" class="btn btn-primary btn-lg">{{ g.translations.cta_shop }}</a>
+        <div class="cta-primary">
+            <a href="/products" class="btn btn-primary btn-lg pulse-animation">
+                {{ g.translations.cta_shop }}
+                <i class="fas fa-arrow-right ms-2"></i>
+            </a>
         </div>
         {{ share_buttons() }}
     </div>
