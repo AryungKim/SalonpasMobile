@@ -6,10 +6,10 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 text-lg-start text-center">
-                <h1 class="display-3 fw-bold mb-4">{{ g.translations.hero_title }}</h1>
-                <p class="lead mb-5">{{ g.translations.hero_subtitle }}</p>
+                <h1 class="hero-title mb-4">{{ g.translations.hero_title }}</h1>
+                <p class="hero-subtitle mb-5">{{ g.translations.hero_subtitle }}</p>
                 <div class="cta-primary">
-                    <a href="/products" class="btn btn-primary btn-lg pulse-animation" data-tracking="hero-cta">
+                    <a href="/products" class="btn btn-hero pulse-animation" data-tracking="hero-cta">
                         {{ g.translations.cta_shop }}
                         <i class="fas fa-arrow-right ms-2"></i>
                     </a>
@@ -28,7 +28,7 @@
 
 <section class="benefits-section py-5">
     <div class="container">
-        <h2 class="text-center mb-5">{{ g.translations.benefits_title }}</h2>
+        <h2 class="section-title text-center mb-5">{{ g.translations.benefits_title }}</h2>
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="benefit-card" data-tracking="benefit-1">
@@ -65,8 +65,8 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <h2 class="display-4 mb-4">{{ g.translations.showcase_title }}</h2>
-                <p class="lead mb-4">{{ g.translations.showcase_description }}</p>
+                <h2 class="section-title mb-4">{{ g.translations.showcase_title }}</h2>
+                <p class="section-subtitle mb-4">{{ g.translations.showcase_description }}</p>
                 <ul class="feature-list">
                     <li><i class="fas fa-check text-success"></i> {{ g.translations.feature_1 }}</li>
                     <li><i class="fas fa-check text-success"></i> {{ g.translations.feature_2 }}</li>
@@ -74,8 +74,8 @@
                     <li><i class="fas fa-check text-success"></i> {{ g.translations.feature_4 }}</li>
                 </ul>
                 <div class="mt-4">
-                    <a href="/products" class="btn btn-lg btn-primary" data-tracking="showcase-cta">
-                        {{ g.translations.cta_shop }}
+                    <a href="/products" class="btn btn-outline-primary btn-lg" data-tracking="showcase-cta">
+                        {{ g.translations.nav_products }}
                         <i class="fas fa-arrow-right ms-2"></i>
                     </a>
                 </div>
@@ -84,7 +84,7 @@
                 <div class="product-showcase">
                     <img src="{{ url_for('static', filename='images/product-showcase.svg') }}" 
                          alt="Product Features" 
-                         class="img-fluid rotate-animation">
+                         class="img-fluid">
                 </div>
             </div>
         </div>
@@ -93,10 +93,10 @@
 
 <section class="cta-section py-5">
     <div class="container text-center">
-        <h2 class="display-4 mb-4">{{ g.translations.cta_title }}</h2>
-        <p class="lead mb-4">{{ g.translations.cta_description }}</p>
+        <h2 class="section-title mb-4">{{ g.translations.cta_title }}</h2>
+        <p class="section-subtitle mb-4">{{ g.translations.cta_description }}</p>
         <div class="cta-primary">
-            <a href="/products" class="btn btn-primary btn-lg pulse-animation" data-tracking="final-cta">
+            <a href="/products" class="btn btn-hero pulse-animation" data-tracking="final-cta">
                 {{ g.translations.cta_shop }}
                 <i class="fas fa-arrow-right ms-2"></i>
             </a>
