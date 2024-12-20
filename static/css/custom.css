@@ -1,5 +1,5 @@
 :root {
-    --primary-green: #2E8B57;
+    --primary-green: #00843D;
     --secondary-white: #FFFFFF;
     --accent-light-green: #F0FFF0;
     --text-dark-grey: #333333;
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, var(--primary-green), #1f6e43);
+    background: linear-gradient(135deg, var(--primary-green), #006C32);
     color: var(--secondary-white);
     padding: 6rem 0;
     position: relative;
@@ -157,33 +157,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-2px);
 }
 
-.btn-outline-primary {
-    color: var(--primary-green);
-    border-color: var(--primary-green);
-    padding: 0.75rem 2rem;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn-outline-primary:hover {
-    background-color: var(--primary-green);
-    color: var(--secondary-white);
-    transform: translateY(-2px);
-}
-
-/* Language Toggle */
-.form-check-input:checked {
-    background-color: var(--primary-green);
-    border-color: var(--primary-green);
-}
-
-/* Footer */
-footer {
-    background-color: var(--accent-light-green);
-    color: var(--text-dark-grey);
-}
-
 /* Share Buttons */
 .share-buttons {
     padding: 1.5rem 0;
@@ -213,56 +186,6 @@ footer {
 
 [dir="rtl"] .share-buttons {
     text-align: right;
-}
-
-/* Mobile Optimizations */
-@media (max-width: 768px) {
-    .journey-steps {
-        flex-direction: column;
-        gap: 2.5rem;
-    }
-
-    .journey-step {
-        width: 100%;
-        padding: 1.5rem 0;
-    }
-
-    .progress-line {
-        width: 4px;
-        height: 50px;
-        margin: 0;
-        transform: scaleY(0);
-    }
-
-    .progress-line.animate {
-        transform: scaleY(1);
-    }
-
-    .hero-section {
-        text-align: center;
-        padding: 4rem 0;
-    }
-
-    .feature-card {
-        margin-bottom: 2rem;
-    }
-
-    .share-buttons .btn {
-        margin-bottom: 1rem;
-    }
-    .navbar-brand img {
-        max-width: 120px;
-    }
-    .feature-card {
-        margin-bottom: 1.5rem;
-    }
-    .btn {
-        width: 100%;
-        margin-bottom: 0.5rem;
-    }
-    .feature-list {
-        margin-bottom: 2rem;
-    }
 }
 
 /* Journey Tracker */
@@ -364,4 +287,58 @@ footer {
 
 .feature-card {
     backface-visibility: hidden;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .journey-steps {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .journey-step {
+        width: 100%;
+        padding: 1.5rem 0;
+    }
+
+    .progress-line {
+        width: 4px;
+        height: 50px;
+        margin: 0;
+        transform: scaleY(0);
+    }
+
+    .progress-line.animate {
+        transform: scaleY(1);
+    }
+
+    .hero-section {
+        text-align: center;
+        padding: 4rem 0;
+    }
+
+    .feature-card {
+        margin-bottom: 2rem;
+    }
+
+    .share-buttons .btn {
+        margin-bottom: 1rem;
+    }
+
+    .navbar-brand img {
+        max-width: 120px;
+    }
+
+    .feature-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .feature-list {
+        margin-bottom: 2rem;
+    }
 }
