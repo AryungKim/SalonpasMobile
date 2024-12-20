@@ -13,12 +13,21 @@ TRANSLATIONS = {
         'benefit_3': 'Easy to Apply',
         'products_title': 'Our Products',
         'promotions_title': 'Special Offers',
-        # New share translations
         'share_title': 'Share',
         'share_twitter': 'Share on Twitter',
         'share_facebook': 'Share on Facebook',
         'share_whatsapp': 'Share on WhatsApp',
         'share_message': 'Experience natural pain relief with Salonpas - trusted by athletes and fitness enthusiasts! 💪 #Salonpas #PainRelief',
+        # Journey tracker translations
+        'journey_title': 'Your Pain Relief Journey',
+        'journey_step_1': 'Apply Patch',
+        'journey_step_2': 'Quick Absorption',
+        'journey_step_3': 'Feel Relief',
+        'journey_step_4': 'Return to Activity',
+        'journey_description_1': 'Easy application in seconds',
+        'journey_description_2': 'Advanced formula starts working',
+        'journey_description_3': 'Experience soothing comfort',
+        'journey_description_4': 'Get back to what you love',
     },
     'ar': {
         'nav_home': 'الرئيسية',
@@ -34,11 +43,20 @@ TRANSLATIONS = {
         'benefit_3': 'سهل الاستخدام',
         'products_title': 'منتجاتنا',
         'promotions_title': 'عروض خاصة',
-        # New share translations
         'share_title': 'مشاركة',
         'share_twitter': 'مشاركة على تويتر',
         'share_facebook': 'مشاركة على فيسبوك',
         'share_whatsapp': 'مشاركة على واتساب',
         'share_message': 'جرب التخفيف الطبيعي للألم مع سالونباس - موثوق به من قبل الرياضيين! 💪 #سالونباس #تخفيف_الألم',
+        # Journey tracker translations
+        'journey_title': 'رحلة تخفيف الألم',
+        'journey_step_1': 'ضع اللاصقة',
+        'journey_step_2': 'امتصاص سريع',
+        'journey_step_3': 'الشعور بالراحة',
+        'journey_step_4': 'العودة للنشاط',
+        'journey_description_1': 'تطبيق سهل في ثوانٍ',
+        'journey_description_2': 'تركيبة متطورة تبدأ في العمل',
+        'journey_description_3': 'استمتع بالراحة المهدئة',
+        'journey_description_4': 'عد إلى ما تحب',
     }
 }
