@@ -9,62 +9,83 @@
                 <h1 class="display-3 fw-bold mb-4">{{ g.translations.hero_title }}</h1>
                 <p class="lead mb-5">{{ g.translations.hero_subtitle }}</p>
                 <div class="cta-primary">
-                    <a href="/products" class="btn btn-primary btn-lg pulse-animation">
+                    <a href="/products" class="btn btn-primary btn-lg pulse-animation" data-tracking="hero-cta">
                         {{ g.translations.cta_shop }}
                         <i class="fas fa-arrow-right ms-2"></i>
                     </a>
                 </div>
             </div>
+            <div class="col-lg-6">
+                <div class="hero-image-container">
+                    <img src="{{ url_for('static', filename='images/hero-product.svg') }}" 
+                         alt="Salonpas Products" 
+                         class="img-fluid floating-animation">
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="video-section py-5">
+<section class="benefits-section py-5">
     <div class="container">
-        <div class="video-container">
-            <iframe
-                src="https://www.youtube.com/embed/BDQCrLb-ODo"
-                title="Salonpas Exercise Video"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                class="video-frame">
-            </iframe>
+        <h2 class="text-center mb-5">{{ g.translations.benefits_title }}</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="benefit-card" data-tracking="benefit-1">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>{{ g.translations.benefit_1 }}</h3>
+                    <p>{{ g.translations.benefit_description_1 }}</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="benefit-card" data-tracking="benefit-2">
+                    <div class="benefit-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>{{ g.translations.benefit_2 }}</h3>
+                    <p>{{ g.translations.benefit_description_2 }}</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="benefit-card" data-tracking="benefit-3">
+                    <div class="benefit-icon">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h3>{{ g.translations.benefit_3 }}</h3>
+                    <p>{{ g.translations.benefit_description_3 }}</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="journey-tracker py-5">
+<section class="showcase-section py-5 bg-light">
     <div class="container">
-        <h2 class="text-center mb-5">{{ g.translations.journey_title }}</h2>
-        <div class="journey-steps">
-            <div class="journey-step">
-                <div class="step-icon">
-                    <i class="fas fa-hand-holding-medical"></i>
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="display-4 mb-4">{{ g.translations.showcase_title }}</h2>
+                <p class="lead mb-4">{{ g.translations.showcase_description }}</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check text-success"></i> {{ g.translations.feature_1 }}</li>
+                    <li><i class="fas fa-check text-success"></i> {{ g.translations.feature_2 }}</li>
+                    <li><i class="fas fa-check text-success"></i> {{ g.translations.feature_3 }}</li>
+                    <li><i class="fas fa-check text-success"></i> {{ g.translations.feature_4 }}</li>
+                </ul>
+                <div class="mt-4">
+                    <a href="/products" class="btn btn-lg btn-primary" data-tracking="showcase-cta">
+                        {{ g.translations.cta_shop }}
+                        <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
                 </div>
-                <h3>{{ g.translations.journey_step_1 }}</h3>
-                <p>{{ g.translations.journey_description_1 }}</p>
             </div>
-            <div class="journey-step">
-                <div class="step-icon">
-                    <i class="fas fa-tint"></i>
+            <div class="col-lg-6">
+                <div class="product-showcase">
+                    <img src="{{ url_for('static', filename='images/product-showcase.svg') }}" 
+                         alt="Product Features" 
+                         class="img-fluid rotate-animation">
                 </div>
-                <h3>{{ g.translations.journey_step_2 }}</h3>
-                <p>{{ g.translations.journey_description_2 }}</p>
-            </div>
-            <div class="journey-step">
-                <div class="step-icon">
-                    <i class="fas fa-smile"></i>
-                </div>
-                <h3>{{ g.translations.journey_step_3 }}</h3>
-                <p>{{ g.translations.journey_description_3 }}</p>
-            </div>
-            <div class="journey-step">
-                <div class="step-icon">
-                    <i class="fas fa-running"></i>
-                </div>
-                <h3>{{ g.translations.journey_step_4 }}</h3>
-                <p>{{ g.translations.journey_description_4 }}</p>
             </div>
         </div>
     </div>
@@ -75,7 +96,7 @@
         <h2 class="display-4 mb-4">{{ g.translations.cta_title }}</h2>
         <p class="lead mb-4">{{ g.translations.cta_description }}</p>
         <div class="cta-primary">
-            <a href="/products" class="btn btn-primary btn-lg pulse-animation">
+            <a href="/products" class="btn btn-primary btn-lg pulse-animation" data-tracking="final-cta">
                 {{ g.translations.cta_shop }}
                 <i class="fas fa-arrow-right ms-2"></i>
             </a>
