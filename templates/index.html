@@ -5,15 +5,12 @@
 <section class="hero-section text-center">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6 text-lg-start mb-5 mb-lg-0">
+            <div class="col-lg-8 mx-auto">
                 <h1 class="display-4 fw-bold mb-4">{{ g.translations.hero_title }}</h1>
                 <p class="lead mb-5">{{ g.translations.hero_subtitle }}</p>
-                <div class="d-flex gap-3 justify-content-lg-start justify-content-center">
+                <div class="d-flex gap-3 justify-content-center">
                     <a href="/products" class="btn btn-primary btn-lg">{{ g.translations.cta_shop }}</a>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <img src="https://images.unsplash.com/photo-1504813184591-01572f98c85f" alt="Salonpas Product" class="img-fluid rounded-4 shadow"/>
             </div>
         </div>
     </div>
@@ -68,7 +65,7 @@
                         <i class="fas fa-bolt"></i>
                     </div>
                     <h3>{{ g.translations.benefit_1 }}</h3>
-                    <p>Feel the difference in minutes with our targeted pain relief technology</p>
+                    <p>{{ g.translations.benefit_description_1 }}</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -77,7 +74,7 @@
                         <i class="fas fa-check-circle"></i>
                     </div>
                     <h3>{{ g.translations.benefit_2 }}</h3>
-                    <p>Trusted by healthcare professionals worldwide</p>
+                    <p>{{ g.translations.benefit_description_2 }}</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -86,7 +83,7 @@
                         <i class="fas fa-hand-holding"></i>
                     </div>
                     <h3>{{ g.translations.benefit_3 }}</h3>
-                    <p>Simple application process for immediate comfort</p>
+                    <p>{{ g.translations.benefit_description_3 }}</p>
                 </div>
             </div>
         </div>
@@ -96,17 +93,14 @@
 <section class="product-showcase py-5 bg-light">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <img src="https://images.unsplash.com/photo-1519494080410-f9aa76cb4283" alt="Salonpas Products" class="img-fluid rounded-4 shadow"/>
-            </div>
-            <div class="col-lg-6">
-                <h2 class="mb-4">Experience Premium Pain Relief</h2>
-                <p class="lead mb-4">Our innovative patch technology delivers targeted relief exactly where you need it most.</p>
-                <ul class="feature-list">
-                    <li><i class="fas fa-check text-primary"></i> Powerful pain relief for muscles and joints</li>
-                    <li><i class="fas fa-check text-primary"></i> Easy to apply and remove</li>
-                    <li><i class="fas fa-check text-primary"></i> Flexible design that moves with you</li>
-                    <li><i class="fas fa-check text-primary"></i> Suitable for sports and daily activities</li>
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">{{ g.translations.showcase_title }}</h2>
+                <p class="lead mb-4">{{ g.translations.showcase_description }}</p>
+                <ul class="feature-list text-start">
+                    <li><i class="fas fa-check text-primary"></i> {{ g.translations.feature_1 }}</li>
+                    <li><i class="fas fa-check text-primary"></i> {{ g.translations.feature_2 }}</li>
+                    <li><i class="fas fa-check text-primary"></i> {{ g.translations.feature_3 }}</li>
+                    <li><i class="fas fa-check text-primary"></i> {{ g.translations.feature_4 }}</li>
                 </ul>
                 <a href="/products" class="btn btn-primary btn-lg mt-4">{{ g.translations.cta_shop }}</a>
             </div>
@@ -116,8 +110,8 @@
 
 <section class="cta-section py-5">
     <div class="container text-center">
-        <h2 class="mb-4">Ready to Experience Relief?</h2>
-        <p class="lead mb-4">Join thousands of satisfied customers who trust Salonpas for their pain relief needs</p>
+        <h2 class="mb-4">{{ g.translations.cta_title }}</h2>
+        <p class="lead mb-4">{{ g.translations.cta_description }}</p>
         <div class="d-flex gap-3 justify-content-center">
             <a href="/products" class="btn btn-primary btn-lg">{{ g.translations.cta_shop }}</a>
         </div>
