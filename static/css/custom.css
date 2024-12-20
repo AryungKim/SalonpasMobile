@@ -291,6 +291,8 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--secondary-white);
     height: 100%;
     border-radius: 15px;
+    position: relative;
+    overflow: hidden;
 }
 
 .shadow-hover {
@@ -313,6 +315,16 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     margin: 0 auto;
     transition: all 0.3s ease;
+}
+
+.animate-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
 }
 
 .product-card:hover .product-icon {
@@ -346,46 +358,73 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.6;
 }
 
-.product-card .btn-primary {
-    background: var(--primary-green);
-    border: none;
-    padding: 1rem 1.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
+/* Features Badges */
+.features .badge {
+    font-size: 0.85rem;
+    padding: 0.5em 1em;
+    margin-right: 0.5rem;
+    border-radius: 50px;
+    font-weight: 500;
 }
 
-.product-card .btn-outline-primary {
+/* Ribbon Style */
+.ribbon {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+.ribbon-top-right {
+    top: -10px;
+    right: -10px;
+}
+
+.ribbon-top-right::before,
+.ribbon-top-right::after {
+    border-top-color: transparent;
+    border-right-color: transparent;
+}
+
+.ribbon-top-right::before {
+    top: 0;
+    left: 0;
+}
+
+.ribbon-top-right::after {
+    bottom: 0;
+    right: 0;
+}
+
+.ribbon span {
+    position: absolute;
+    display: block;
+    width: 225px;
+    padding: 8px 0;
+    background-color: var(--primary-green);
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    color: #fff;
+    font-size: 0.8rem;
+    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+    text-transform: uppercase;
+    text-align: center;
+    transform: rotate(45deg);
+    right: -25px;
+    top: 30px;
+}
+
+/* Price Comparison */
+.price-comparison {
+    background: rgba(0,132,61,0.05);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.price-comparison h4 {
     color: var(--primary-green);
-    border-color: var(--primary-green);
-    padding: 1rem 1.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-}
-
-.product-card .btn-primary:hover,
-.product-card .btn-outline-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .product-card {
-        margin-bottom: 2rem;
-    }
-
-    .product-icon {
-        width: 60px;
-        height: 60px;
-    }
-
-    .product-icon i {
-        font-size: 1.8rem;
-    }
+    font-weight: bold;
 }
 
 /* Platform Comparison Styles */
@@ -478,5 +517,10 @@ h1, h2, h3, h4, h5, h6 {
     .platform-card .btn-outline-primary {
         padding: 0.75rem 1rem;
         font-size: 0.9rem;
+    }
+
+    .features .badge {
+        display: inline-block;
+        margin-bottom: 0.5rem;
     }
 }
