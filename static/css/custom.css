@@ -14,12 +14,14 @@ body {
 
 /* Typography */
 .hero-title {
-    font-size: 4rem;
-    font-weight: 800;
-    line-height: 1.2;
-    color: var(--secondary-white);
+    background: linear-gradient(to right, #ffffff, #e0ffe0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    font-size: 4.5rem;
     letter-spacing: -0.02em;
+    line-height: 1.1;
 }
 
 .hero-subtitle {
@@ -34,7 +36,29 @@ body {
     color: var(--primary-green);
     margin-bottom: 1rem;
     letter-spacing: -0.01em;
+    position: relative;
+    display: inline-block;
 }
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-green), #006C32);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.section-title:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
 
 .section-subtitle {
     font-size: 1.2rem;
@@ -60,7 +84,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, var(--primary-green), #006C32);
+    background: linear-gradient(135deg, #00843D 0%, #006C32 50%, #004B23 100%);
     color: var(--secondary-white);
     padding: 8rem 0;
     position: relative;
@@ -77,10 +101,25 @@ body {
     background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 150%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-placeholder {
+    height: 400px;
+    width: 100%;
+}
+
 /* Button Styles */
 .btn-hero {
-    background-color: var(--secondary-white);
-    color: var(--primary-green);
+    background: linear-gradient(45deg, var(--secondary-white), #f0fff0);
     border: none;
     padding: 1.2rem 2.5rem;
     font-size: 1.3rem;
@@ -90,13 +129,23 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
 }
 
-.btn-hero:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    background-color: #f8f9fa;
-    color: var(--primary-green);
+.btn-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,.3), transparent);
+    transition: all 0.6s ease;
+}
+
+.btn-hero:hover::before {
+    left: 100%;
 }
 
 /* Benefits Section */
@@ -107,6 +156,11 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
     height: 100%;
+    border: 2px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box,
+                linear-gradient(45deg, var(--primary-green), #006C32) border-box;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
 .benefit-card:hover {
@@ -117,13 +171,14 @@ body {
 .benefit-icon {
     width: 80px;
     height: 80px;
-    background: var(--accent-light-green);
+    background: linear-gradient(135deg, var(--accent-light-green), #d0ffd0);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
     transition: all 0.3s ease;
+    transform: translateZ(20px);
 }
 
 .benefit-icon i {
@@ -132,7 +187,7 @@ body {
 }
 
 .benefit-card:hover .benefit-icon {
-    background: var(--primary-green);
+    background: linear-gradient(135deg, var(--primary-green), #006C32);
 }
 
 .benefit-card:hover .benefit-icon i {
@@ -180,6 +235,42 @@ body {
     padding: 6rem 0;
 }
 
+/* Image Placeholder Styles */
+.placeholder-image {
+    background: linear-gradient(45deg, #f3f4f6 25%, #e5e7eb 25%, #e5e7eb 50%, #f3f4f6 50%, #f3f4f6 75%, #e5e7eb 75%, #e5e7eb 100%);
+    background-size: 20px 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.placeholder-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.placeholder-image::before {
+    content: '画像挿入予定';
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-green);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 2rem;
+}
+
+.product-placeholder {
+    height: 300px;
+    width: 100%;
+}
+
+
 /* Animation */
 .floating-animation {
     animation: float 6s ease-in-out infinite;
@@ -201,10 +292,15 @@ body {
     100% { transform: scale(1); }
 }
 
+@keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+}
+
 /* Mobile Optimizations */
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     .hero-subtitle {
@@ -225,6 +321,13 @@ body {
 
     .navbar-brand img {
         height: 30px;
+    }
+    .hero-placeholder {
+        height: 250px;
+    }
+
+    .product-placeholder {
+        height: 200px;
     }
 }
 
@@ -249,5 +352,3 @@ body {
     text-align: right;
     font-family: 'Traditional Arabic', sans-serif;
 }
-/* General Styles */
-/* ...rest of the original file's content... */
