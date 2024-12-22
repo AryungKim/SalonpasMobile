@@ -24,7 +24,17 @@ TRANSLATIONS = {
         'feature_3': 'Flexible design that moves with you',
         'feature_4': 'Suitable for sports and daily activities',
         'cta_title': 'Ready to Experience Relief?',
-        'cta_description': 'Join thousands of satisfied customers who trust Salonpas for their pain relief needs'
+        'cta_description': 'Join thousands of satisfied customers who trust Salonpas for their pain relief needs',
+        # New achievement sharing translations
+        'share_title': 'Share Your Progress',
+        'share_message': 'I achieved my wellness goal with Salonpas! 🌟',
+        'share_twitter': 'Share on Twitter',
+        'share_facebook': 'Share on Facebook',
+        'share_whatsapp': 'Share on WhatsApp',
+        'achievement_pain_free': 'Pain-Free Milestone',
+        'achievement_active_days': 'Active Days Streak',
+        'achievement_recovery': 'Recovery Champion',
+        'share_badge_title': 'Health Achievement Unlocked!'
     },
     'ar': {
         'nav_home': 'الرئيسية',
@@ -45,6 +55,16 @@ TRANSLATIONS = {
         'benefit_description_2': 'موثوق به من قبل المتخصصين في الرعاية الصحية في جميع أنحاء العالم',
         'benefit_description_3': 'عملية تطبيق بسيطة للراحة الفورية',
         'showcase_title': 'جرب تخفيف الألم المتميز',
-        'showcase_description': 'تقدم تقنية اللصقات المبتكرة لدينا تخفيفًا مستهدفًا تمامًا حيث تحتاجه'
+        'showcase_description': 'تقدم تقنية اللصقات المبتكرة لدينا تخفيفًا مستهدفًا تمامًا حيث تحتاجه',
+        # New achievement sharing translations
+        'share_title': 'شارك تقدمك',
+        'share_message': 'حققت هدفي الصحي مع سالونباس! 🌟',
+        'share_twitter': 'مشاركة على تويتر',
+        'share_facebook': 'مشاركة على فيسبوك',
+        'share_whatsapp': 'مشاركة على واتساب',
+        'achievement_pain_free': 'إنجاز خالٍ من الألم',
+        'achievement_active_days': 'سلسلة الأيام النشطة',
+        'achievement_recovery': 'بطل التعافي',
+        'share_badge_title': 'تم فتح الإنجاز الصحي!'
     }
 }
