@@ -357,24 +357,53 @@ body {
     background: linear-gradient(45deg, var(--primary-green), #006C32) !important;
 }
 
+/* Updated platform card styles */
 .platform-card {
     background: white;
-    border-radius: 12px;
-    padding: 1rem;
+    border-radius: 8px;
+    padding: 0.75rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .platform-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .platform-logo {
-    height: 30px;
+    height: 24px;
     width: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    object-fit: contain;
 }
+
+.btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary-green), #006C32);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-outline-primary {
+    border: 1px solid var(--primary-green);
+    color: var(--primary-green);
+}
+
+.btn-outline-primary:hover {
+    background: linear-gradient(45deg, var(--primary-green), #006C32);
+    border-color: transparent;
+    color: white;
+}
+
 
 .btn-lg {
     padding: 0.8rem 1.5rem;

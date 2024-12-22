@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="80" height="30" viewBox="0 0 80 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <rect width="80" height="30" fill="#404553"/>
+    <defs>
+        <linearGradient id="noon-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#FDB913"/>
+            <stop offset="100%" style="stop-color:#F7941D"/>
+        </linearGradient>
+    </defs>
+    <rect width="80" height="30" fill="#FFDE4F"/>
     <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" 
-          style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #FFFFFF;">
+          style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #000000;">
         noon
     </text>
 </svg>
