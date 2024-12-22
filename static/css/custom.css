@@ -1,9 +1,8 @@
 :root {
-    --primary-green: #00843D; /* Saudi flag green */
-    --secondary-gold: #D4AF37; /* Traditional Arabic gold */
+    --primary-green: #00843D;
+    --secondary-white: #FFFFFF;
     --accent-light-green: #F0FFF0;
     --text-dark-grey: #333333;
-    --islamic-pattern-opacity: 0.05;
 }
 
 /* General Styles */
@@ -11,30 +10,11 @@ body {
     font-family: 'Poppins', 'Traditional Arabic', sans-serif;
     color: var(--text-dark-grey);
     background-color: var(--secondary-white);
-    position: relative;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/static/images/islamic-pattern-overlay.svg');
-    opacity: var(--islamic-pattern-opacity);
-    z-index: -1;
-    pointer-events: none;
-}
-
-[dir="rtl"] {
-    font-family: 'Traditional Arabic', 'Poppins', sans-serif;
-    text-align: right;
 }
 
 /* Typography */
 .hero-title {
-    font-family: 'Poppins', 'Traditional Arabic', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 800;
     font-size: 4.8rem;
     line-height: 1.1;
@@ -44,15 +24,9 @@ body::before {
         6px 6px 0 rgba(0,0,0,0.2);
     letter-spacing: -0.02em;
     transform: skew(-5deg);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
     position: relative;
     z-index: 1;
-}
-
-[dir="rtl"] .hero-title {
-    font-family: 'Traditional Arabic', 'Poppins', sans-serif;
-    letter-spacing: 0;
-    transform: skew(5deg);
 }
 
 .hero-title:hover {
@@ -62,120 +36,45 @@ body::before {
         8px 8px 0 rgba(0,0,0,0.2);
 }
 
-[dir="rtl"] .hero-title:hover {
-    transform: skew(5deg) scale(1.02);
-}
-
 .hero-subtitle {
     font-size: 1.5rem;
     color: rgba(255,255,255,0.9);
     font-weight: 400;
 }
 
-/* Arabic Typography Enhancements */
-[lang="ar"] {
-    line-height: 1.8;
-    letter-spacing: 0;
-}
-
-/* Islamic Pattern Integration */
-.islamic-pattern-border {
-    position: relative;
-    border: 2px solid var(--primary-green);
-    border-radius: 15px;
-    padding: 2rem;
-    background: linear-gradient(135deg, 
-        rgba(0,132,61,0.05) 0%, 
-        rgba(212,175,55,0.05) 100%
-    );
-    overflow: hidden;
-}
-
-.islamic-pattern-border::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/static/images/islamic-pattern-overlay.svg');
-    opacity: 0.1;
-    z-index: 0;
-}
-
-/* Modern Card Design with Cultural Elements */
-.benefit-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid transparent;
-    background: linear-gradient(white, white) padding-box,
-                linear-gradient(45deg, var(--primary-green), var(--secondary-gold)) border-box;
-}
-
-.benefit-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/static/images/islamic-pattern-overlay.svg');
-    opacity: 0.05;
-    z-index: 0;
-    pointer-events: none;
-}
-
-
-/* Button Styles with Cultural Elements */
-.btn-hero {
-    background: linear-gradient(45deg, var(--secondary-gold), #ffffff);
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
     color: var(--primary-green);
-    border: none;
-    padding: 1.2rem 2.5rem;
-    font-size: 1.3rem;
-    border-radius: 50px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-    font-weight: bold;
-    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
     position: relative;
-    overflow: hidden;
+    display: inline-block;
 }
 
-.btn-hero:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    background: linear-gradient(45deg, #ffffff, var(--secondary-gold));
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-green), #006C32);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
 }
 
-/* Mobile Optimizations */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 3rem;
-    }
-
-    [dir="rtl"] .hero-title {
-        font-size: 2.8rem;
-    }
-
-    .benefit-card {
-        margin-bottom: 1.5rem;
-    }
+.section-title:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
-/* RTL-specific Adjustments */
-[dir="rtl"] .btn-hero {
-    font-family: 'Traditional Arabic', 'Poppins', sans-serif;
-}
-
-[dir="rtl"] .feature-list li i {
-    margin-right: 0;
-    margin-left: 1rem;
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-dark-grey);
+    line-height: 1.6;
 }
 
 /* Navigation */
@@ -229,40 +128,55 @@ body::before {
     width: 100%;
 }
 
-/* Benefits Section */
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--primary-green);
-    margin-bottom: 1rem;
-    letter-spacing: -0.01em;
+/* Button Styles */
+.btn-hero {
+    background: linear-gradient(45deg, var(--secondary-white), #f0fff0);
+    border: none;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
     position: relative;
-    display: inline-block;
+    overflow: hidden;
 }
 
-.section-title::after {
+.btn-hero::before {
     content: '';
     position: absolute;
-    left: 0;
-    bottom: -10px;
+    top: 0;
+    left: -100%;
     width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-green), #006C32);
-    border-radius: 2px;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,.3), transparent);
+    transition: all 0.6s ease;
 }
 
-.section-title:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
+.btn-hero:hover::before {
+    left: 100%;
 }
 
-.section-subtitle {
-    font-size: 1.2rem;
-    color: var(--text-dark-grey);
-    line-height: 1.6;
+/* Benefits Section */
+.benefit-card {
+    background: var(--secondary-white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 2px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box,
+                linear-gradient(45deg, var(--primary-green), #006C32) border-box;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
 .benefit-icon {
@@ -490,6 +404,7 @@ body::before {
     color: white;
 }
 
+
 .btn-lg {
     padding: 0.8rem 1.5rem;
     font-weight: 600;
@@ -621,6 +536,11 @@ body::before {
     cursor: pointer;
 }
 
+/* RTL Support */
+[dir="rtl"] {
+    text-align: right;
+    font-family: 'Traditional Arabic', sans-serif;
+}
 
 /* Floating CTA Button */
 .floating-cta {
