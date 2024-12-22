@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="metrics-section py-5">
+    <div class="container">
+        <h1 class="text-center mb-5">{{ g.translations.metrics_title }}</h1>
+        
+        <div class="row">
+            <!-- Pain Relief Progress -->
+            <div class="col-lg-6 mb-4">
+                <div class="metric-card">
+                    <div class="arabic-pattern-border">
+                        <canvas id="painReliefChart" width="400" height="300"></canvas>
+                    </div>
+                    <h3 class="text-center mt-3">{{ g.translations.pain_relief_progress }}</h3>
+                </div>
+            </div>
+            
+            <!-- Activity Level -->
+            <div class="col-lg-6 mb-4">
+                <div class="metric-card">
+                    <div class="arabic-pattern-border">
+                        <canvas id="activityLevelChart" width="400" height="300"></canvas>
+                    </div>
+                    <h3 class="text-center mt-3">{{ g.translations.activity_level }}</h3>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Interactive Timeline -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="metric-card">
+                    <div class="arabic-pattern-border">
+                        <canvas id="recoveryTimeline" width="800" height="200"></canvas>
+                    </div>
+                    <h3 class="text-center mt-3">{{ g.translations.recovery_timeline }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.metric-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.arabic-pattern-border {
+    border: 2px solid #00843D;
+    border-radius: 10px;
+    padding: 1rem;
+    background: linear-gradient(45deg, rgba(0,132,61,0.05) 0%, rgba(255,255,255,0.1) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.arabic-pattern-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%2300843D' fill-opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.1;
+    pointer-events: none;
+}
+</style>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='js/health-metrics.js') }}"></script>
+{% endblock %}

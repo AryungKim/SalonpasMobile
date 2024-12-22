@@ -27,3 +27,10 @@ def how_to_use():
 @app.route('/promotions')
 def promotions():
     return render_template('promotions.html')
+
+@app.route('/health-metrics')
+def health_metrics():
+    return render_template('health-metrics.html')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
