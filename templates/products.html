@@ -2,13 +2,13 @@
 
 {% block content %}
 <section class="container my-5">
-    <h1 class="text-center display-4 mb-3">{{ g.translations.products_title }}</h1>
+    <h1 class="text-center display-4 mb-5">{{ g.translations.products_title }}</h1>
     <p class="text-center lead mb-5">Experience instant relief with our innovative products</p>
 
     <div class="row g-4">
         <!-- Pain Relief Patch -->
         <div class="col-md-4">
-            <div class="product-card card h-100 border-0 shadow-hover">
+            <div class="product-card card h-100">
                 <div class="ribbon ribbon-top-right"><span>Best Seller</span></div>
                 <div class="card-body d-flex flex-column p-4">
                     <div class="product-icon mb-4 animate-icon">
@@ -23,36 +23,42 @@
                     <div class="product-image mb-4">
                         <img src="{{ url_for('static', filename='images/スクリーンショット 2024-12-20 17.20.07.png') }}" 
                              alt="Salonpas Pain Relief Patch"
-                             class="img-fluid rounded">
+                             class="img-fluid rounded shadow">
                     </div>
-                    <p class="card-text flex-grow-1 mb-4">Long-lasting pain relief for muscle and joint pain. Perfect for targeted relief exactly where you need it.</p>
-                    <div class="platform-comparison">
+                    <p class="card-text flex-grow-1">Long-lasting pain relief for muscle and joint pain. Perfect for targeted relief exactly where you need it.</p>
+                    <div class="platform-comparison mt-4">
                         <div class="price-comparison mb-3">
-                            <div class="d-flex justify-content-around">
-                                <div class="text-center">
-                                    <small class="text-muted">Starting from</small>
-                                    <h4 class="mb-0">SAR 25.00</h4>
-                                </div>
+                            <div class="text-center">
+                                <h4 class="mb-0">SAR 25.00</h4>
+                                <small class="text-muted">Starting from</small>
                             </div>
                         </div>
                         <div class="row g-3">
                             <div class="col-6">
-                                <div class="platform-card noon">
-                                    <img src="{{ url_for('static', filename='images/noon-logo.svg') }}" alt="Noon" class="platform-logo mb-2">
-                                    <a href="https://www.noon.com/saudi-en/search/?q=salonpas" target="_blank" class="btn btn-primary btn-lg w-100">
+                                <a href="https://www.noon.com/saudi-en/search/?q=salonpas" 
+                                   target="_blank" 
+                                   class="platform-card d-block text-center text-decoration-none">
+                                    <img src="{{ url_for('static', filename='images/noon-logo.svg') }}" 
+                                         alt="Noon" 
+                                         class="platform-logo">
+                                    <span class="btn btn-primary btn-lg w-100">
                                         Buy on Noon
                                         <i class="fas fa-external-link-alt ms-2"></i>
-                                    </a>
-                                </div>
+                                    </span>
+                                </a>
                             </div>
                             <div class="col-6">
-                                <div class="platform-card amazon">
-                                    <img src="{{ url_for('static', filename='images/amazon-logo.svg') }}" alt="Amazon" class="platform-logo mb-2">
-                                    <a href="https://www.amazon.sa/-/en/s?k=salonpas" target="_blank" class="btn btn-outline-primary btn-lg w-100">
+                                <a href="https://www.amazon.sa/-/en/s?k=salonpas" 
+                                   target="_blank" 
+                                   class="platform-card d-block text-center text-decoration-none">
+                                    <img src="{{ url_for('static', filename='images/amazon-logo.svg') }}" 
+                                         alt="Amazon" 
+                                         class="platform-logo">
+                                    <span class="btn btn-outline-primary btn-lg w-100">
                                         Buy on Amazon
                                         <i class="fas fa-external-link-alt ms-2"></i>
-                                    </a>
-                                </div>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -62,7 +68,7 @@
 
         <!-- Pain Relief Gel -->
         <div class="col-md-4">
-            <div class="product-card card h-100 border-0 shadow-hover">
+            <div class="product-card card h-100">
                 <div class="card-body d-flex flex-column p-4">
                     <div class="product-icon mb-4 animate-icon">
                         <i class="fas fa-pump-medical fa-3x text-primary"></i>
@@ -76,36 +82,42 @@
                     <div class="product-image mb-4">
                         <img src="{{ url_for('static', filename='images/スクリーンショット 2024-12-20 17.20.07.png') }}" 
                              alt="Salonpas Pain Relief Gel"
-                             class="img-fluid rounded">
+                             class="img-fluid rounded shadow">
                     </div>
-                    <p class="card-text flex-grow-1 mb-4">Fast-absorbing gel for targeted pain relief. Easy to apply with quick-acting formula for immediate comfort.</p>
-                    <div class="platform-comparison">
+                    <p class="card-text flex-grow-1">Fast-absorbing gel for targeted pain relief. Easy to apply with quick-acting formula for immediate comfort.</p>
+                    <div class="platform-comparison mt-4">
                         <div class="price-comparison mb-3">
-                            <div class="d-flex justify-content-around">
-                                <div class="text-center">
-                                    <small class="text-muted">Starting from</small>
-                                    <h4 class="mb-0">SAR 30.00</h4>
-                                </div>
+                            <div class="text-center">
+                                <h4 class="mb-0">SAR 30.00</h4>
+                                <small class="text-muted">Starting from</small>
                             </div>
                         </div>
                         <div class="row g-3">
                             <div class="col-6">
-                                <div class="platform-card noon">
-                                    <img src="{{ url_for('static', filename='images/noon-logo.svg') }}" alt="Noon" class="platform-logo mb-2">
-                                    <a href="https://www.noon.com/saudi-en/search/?q=salonpas+gel" target="_blank" class="btn btn-primary btn-lg w-100">
+                                <a href="https://www.noon.com/saudi-en/search/?q=salonpas+gel" 
+                                   target="_blank" 
+                                   class="platform-card d-block text-center text-decoration-none">
+                                    <img src="{{ url_for('static', filename='images/noon-logo.svg') }}" 
+                                         alt="Noon" 
+                                         class="platform-logo">
+                                    <span class="btn btn-primary btn-lg w-100">
                                         Buy on Noon
                                         <i class="fas fa-external-link-alt ms-2"></i>
-                                    </a>
-                                </div>
+                                    </span>
+                                </a>
                             </div>
                             <div class="col-6">
-                                <div class="platform-card amazon">
-                                    <img src="{{ url_for('static', filename='images/amazon-logo.svg') }}" alt="Amazon" class="platform-logo mb-2">
-                                    <a href="https://www.amazon.sa/-/en/s?k=salonpas+gel" target="_blank" class="btn btn-outline-primary btn-lg w-100">
+                                <a href="https://www.amazon.sa/-/en/s?k=salonpas+gel" 
+                                   target="_blank" 
+                                   class="platform-card d-block text-center text-decoration-none">
+                                    <img src="{{ url_for('static', filename='images/amazon-logo.svg') }}" 
+                                         alt="Amazon" 
+                                         class="platform-logo">
+                                    <span class="btn btn-outline-primary btn-lg w-100">
                                         Buy on Amazon
                                         <i class="fas fa-external-link-alt ms-2"></i>
-                                    </a>
-                                </div>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -115,7 +127,7 @@
 
         <!-- Pain Relief Spray -->
         <div class="col-md-4">
-            <div class="product-card card h-100 border-0 shadow-hover">
+            <div class="product-card card h-100">
                 <div class="ribbon ribbon-top-right"><span>New</span></div>
                 <div class="card-body d-flex flex-column p-4">
                     <div class="product-icon mb-4 animate-icon">
@@ -130,36 +142,42 @@
                     <div class="product-image mb-4">
                         <img src="{{ url_for('static', filename='images/スクリーンショット 2024-12-20 17.20.07.png') }}" 
                              alt="Salonpas Pain Relief Spray"
-                             class="img-fluid rounded">
+                             class="img-fluid rounded shadow">
                     </div>
-                    <p class="card-text flex-grow-1 mb-4">Easy-to-use spray for quick pain relief. Perfect for hard-to-reach areas and instant application.</p>
-                    <div class="platform-comparison">
+                    <p class="card-text flex-grow-1">Easy-to-use spray for quick pain relief. Perfect for hard-to-reach areas and instant application.</p>
+                    <div class="platform-comparison mt-4">
                         <div class="price-comparison mb-3">
-                            <div class="d-flex justify-content-around">
-                                <div class="text-center">
-                                    <small class="text-muted">Starting from</small>
-                                    <h4 class="mb-0">SAR 35.00</h4>
-                                </div>
+                            <div class="text-center">
+                                <h4 class="mb-0">SAR 35.00</h4>
+                                <small class="text-muted">Starting from</small>
                             </div>
                         </div>
                         <div class="row g-3">
                             <div class="col-6">
-                                <div class="platform-card noon">
-                                    <img src="{{ url_for('static', filename='images/noon-logo.svg') }}" alt="Noon" class="platform-logo mb-2">
-                                    <a href="https://www.noon.com/saudi-en/search/?q=salonpas+spray" target="_blank" class="btn btn-primary btn-lg w-100">
+                                <a href="https://www.noon.com/saudi-en/search/?q=salonpas+spray" 
+                                   target="_blank" 
+                                   class="platform-card d-block text-center text-decoration-none">
+                                    <img src="{{ url_for('static', filename='images/noon-logo.svg') }}" 
+                                         alt="Noon" 
+                                         class="platform-logo">
+                                    <span class="btn btn-primary btn-lg w-100">
                                         Buy on Noon
                                         <i class="fas fa-external-link-alt ms-2"></i>
-                                    </a>
-                                </div>
+                                    </span>
+                                </a>
                             </div>
                             <div class="col-6">
-                                <div class="platform-card amazon">
-                                    <img src="{{ url_for('static', filename='images/amazon-logo.svg') }}" alt="Amazon" class="platform-logo mb-2">
-                                    <a href="https://www.amazon.sa/-/en/s?k=salonpas+spray" target="_blank" class="btn btn-outline-primary btn-lg w-100">
+                                <a href="https://www.amazon.sa/-/en/s?k=salonpas+spray" 
+                                   target="_blank" 
+                                   class="platform-card d-block text-center text-decoration-none">
+                                    <img src="{{ url_for('static', filename='images/amazon-logo.svg') }}" 
+                                         alt="Amazon" 
+                                         class="platform-logo">
+                                    <span class="btn btn-outline-primary btn-lg w-100">
                                         Buy on Amazon
                                         <i class="fas fa-external-link-alt ms-2"></i>
-                                    </a>
-                                </div>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -168,4 +186,19 @@
         </div>
     </div>
 </section>
+
+<style>
+.animate-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+.shadow {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+</style>
 {% endblock %}
