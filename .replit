@@ -6,6 +6,7 @@ channel = "stable-24_05"
 [deployment]
 deploymentTarget = "static"
 publicDir = "./"
+run = ["sh", "-c", "gunicorn main:application --bind 0.0.0.0:5000 --log-level info"]
 
 [workflows]
 runButton = "Project"
@@ -31,7 +32,7 @@ task = "packager.installForAll"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python main.py"
+args = "gunicorn main:application --bind 0.0.0.0:5000 --log-level info"
 waitForPort = 5000
 
 [[ports]]
