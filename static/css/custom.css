@@ -267,7 +267,7 @@ body {
 }
 
 .placeholder-image::before {
-    content: '画像挿入予定';
+    content: 'Image';
     font-family: 'Poppins', sans-serif;
     color: var(--primary-green);
     font-size: 1.2rem;
